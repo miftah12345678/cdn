@@ -1,6 +1,6 @@
 <header class="bg-gray-800 py-4 shadow-lg">
   <div class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold text-blue-400">AR Hosting API Documentation</h1>
+    <h1 class="text-3xl font-bold text-blue-400">Hams Hosting API Documentation</h1>
   </div>
 </header>
 
@@ -8,7 +8,7 @@
   <!-- Introduction -->
   <section id="introduction" class="mb-8">
     <h2 class="text-2xl font-semibold text-blue-300">Introduction</h2>
-    <p class="text-gray-300">Welcome to the AR Hosting API documentation. This API allows you to upload files and interact with our hosting platform.</p>
+    <p class="text-gray-300">Welcome to the Hams Hosting API documentation. This API allows you to upload files and interact with our hosting platform.</p>
   </section>
 
   <!-- Dropdown for Language Selection -->
@@ -59,7 +59,7 @@
 
       <!-- CURL Block -->
       <div id="code-block-curl" class="code-block mt-4">
-        <pre><code id="curl-code" class="language-bash">curl -X POST https://cdn.arifzyn.tech/api/upload \
+        <pre><code id="curl-code" class="language-bash">curl -X POST https://cdn.hamstore.me/api/upload \
   -F "file=@/path/to/your/file.png"</code></pre>
         <button class="copy-btn" onclick="copyToClipboard('#curl-code')"><i class="fas fa-copy"></i> Copy Code</button>
       </div>
@@ -74,7 +74,7 @@ const form = new FormData();
 const filePath = '/path/to/your/file.png';
 form.append("file", fs.createReadStream(filePath));
 
-fetch('https://cdn.arifzyn.tech/api/upload', {
+fetch('https://cdn.hamstore.me/api/upload', {
   method: 'POST',
   body: form,
   headers: form.getHeaders()
@@ -95,7 +95,7 @@ const formData = new FormData();
 const filePath = '/path/to/your/file.png';
 formData.append("file", fs.createReadStream(filePath));
 
-axios.post('https://cdn.arifzyn.tech/api/upload', formData, {
+axios.post('https://cdn.hamstore.me/api/upload', formData, {
   headers: {
     ...formData.getHeaders(),
   },
